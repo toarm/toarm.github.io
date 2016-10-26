@@ -3,8 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <title>Toarm</title>
+    <script>
+        var Polymer = {dom: "shady"}
+    </script>
+    <script src="bower_components/webcomponentsjs/webcomponents-lite.min.js"></script>
+    <link rel="import" href="elements.build.html">
 </head>
 <body>
-Hello World
+
+<style>
+    main {
+        /*
+            needs to have position relative cause sticky-collapsible-sidenav is positioned absolute
+            hide overflow in addition so it hidden when collapsed
+         */
+        position: relative;
+        overflow: hidden;
+
+        display: block;
+        background-color: aqua;
+        width: 1200px;
+        height: 2000px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    [slot="caption"] {
+        padding: 20px;
+        color: white;
+        font-weight: bold;
+        background-color: red;
+        user-select: none;
+    }
+
+    [slot="content"] {
+        padding: 20px;
+        color: white;
+        min-width: 180px;
+        font-weight: bold;
+        text-align: left;
+        background-color: blue;
+    }
+
+    button {
+        cursor: pointer;
+    }
+</style>
+<main>
+    <sticky-sidenav align="left">
+        <div slot="caption">Position Relative</div>
+
+        <div slot="content">
+            <!-- data-toggle indicates that this button is used to toggle the sidenav-->
+            <button data-toggle>Toggle</button>
+            <ul>
+                <li>Punkt 1</li>
+                <li>Punkt 2</li>
+            </ul>
+        </div>
+    </sticky-sidenav>
+</main>
+
+<sticky-sidenav align="right" style="position: fixed">
+    <div slot="caption">Position Fixed</div>
+
+    <div slot="content">
+        <!-- data-toggle indicates that this button is used to toggle the sidenav-->
+        <button data-toggle>Toggle</button>
+        <ul>
+            <li>Punkt 1</li>
+            <li>Punkt 2</li>
+        </ul>
+    </div>
+</sticky-sidenav>
 </body>
-</html>
+</html>#
