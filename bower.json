@@ -1,0 +1,22 @@
+{
+  "name": "toarm.github.io",
+  "homepage": "https://github.com/toarm/toarm.github.io",
+  "authors": [
+    "armbruster.tobias2512@gmail.com"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "sticky-collapsible-sidenav": "https://github.com/toarm/sticky-collapsible-sidenav.git"
+  },
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

@@ -1,0 +1,29 @@
+<!DOCTYPE html><html><head><script src="elements.build.js" defer=""></script><meta charset="UTF-8"><!--
+@license
+Copyright (c) 2014 The Polymer Project Authors. All rights reserved.
+This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
+The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
+The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
+Code distributed by Google as part of the polymer project is also
+subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
+--><!--
+@license
+Copyright (c) 2015 The Polymer Project Authors. All rights reserved.
+This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
+The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
+The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
+Code distributed by Google as part of the polymer project is also
+subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
+--></head><body><div hidden="" by-vulcanize=""><dom-module id="sticky-sidenav" assetpath="bower_components/sticky-collapsible-sidenav/">
+    <style>:host {position: absolute;top: 20px;}:host([align="left"]) {left: 0;}:host([align="right"]) {right: 0;}:host([align="left"]) #content {transform: translate(0%, 0%);}:host([align="left"]) #caption {transform: translate(100%, 0%);}#caption {position: absolute;right: 0;transition: transform 0.3s;cursor: pointer;@apply(--caption-mixin);}#content {position: absolute;transition: transform 0.3s;transform: translate(100%, 0%);right: 0;text-align: left;@apply(--content-mixin);}.transformZero {transform: translate(0%, 0%) !important;}.transformX {transform: translate(100%, 0%) !important;}</style>
+    <template>
+        <div id="caption" on-tap="_handleTap">
+            <slot name="caption">Test</slot>
+        </div>
+        <div id="content">
+            <slot name="content"></slot>
+        </div>
+    </template>
+</dom-module>
+
+</div></body></html>
